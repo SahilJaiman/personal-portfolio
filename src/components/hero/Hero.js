@@ -94,7 +94,7 @@ export default function Hero() {
                                 <ambientLight intensity={0.1} />
                                 <directionalLight intensity={0.6} />
                                 <Suspense fallback={null}>
-                                   
+                                    <Model scale={1.5} position={[0.025, -2, 0]} />
                                 </Suspense>
                                 <OrbitControls />
                             </Canvas>
