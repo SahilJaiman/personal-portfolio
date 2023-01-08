@@ -1,20 +1,12 @@
 import "./App.css"
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
-import Navbar from './components/navbar/Navbar';
+
 
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
-import { Canvas } from "@react-three/fiber";
-import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
-
-
-function Model(props) {
-  const { scene } = useGLTF("/avatar.glb");
-  return <primitive object={scene} {...props} />
-}
 
 function App() {
 
