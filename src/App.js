@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Header from './components/header/Header';
+import Hero from './components/hero/Hero';
+import Navbar from './components/navbar/Navbar';
+
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
+
+
+function Model(props) {
+  const { scene } = useGLTF("/avatar.glb");
+  return <primitive object={scene} {...props} />
+}
 
 function App() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App select-none">
+      <button
+        type="button"
+        onClick={scrollToTop}
+        className="block fixed right-[10%] lg:right-[3%] bottom-[3%] lg:bottom-[5%] h-12 w-12 z-40  group bg-slate-200 animate-bounce  transition duration-300 ease-in-out items-center rounded-full p-3 shadow-xl"
+      >
+        <FontAwesomeIcon  icon={faArrowUp} />
+      </button>
+
+
+     
+
+
+
+
+      <Hero />
+
     </div>
   );
 }
