@@ -24,16 +24,17 @@ function App() {
         onClick={scrollToTop}
         className="block fixed right-[10%] lg:right-[3%] bottom-[3%] lg:bottom-[5%] h-12 w-12 z-40  group bg-slate-200 animate-bounce  transition duration-300 ease-in-out items-center rounded-full p-3 shadow-xl"
       >
-        <FontAwesomeIcon  icon={faArrowUp} />
+        <FontAwesomeIcon icon={faArrowUp} />
       </button>
 
 
-     
 
 
 
 
       <Hero />
+      <div className="w-screen h-screen border-blue-600 border-4">DIV1</div>
+      <div className="w-screen h-screen border-blue-600 border-4">DIV2</div>
 
     </div>
   );
